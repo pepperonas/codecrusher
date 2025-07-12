@@ -36,10 +36,10 @@ cd codecrusher
 docker run -d -p 3000:3000 bkimminich/juice-shop
 
 # 4. Alle Challenges lösen
-./scripts/run_all.sh
+python run_codecrusher.py --target http://localhost:3000 --solve-all
 
 # 5. Educational Mode
-./scripts/run_all.sh http://localhost:3000 html educational
+python run_codecrusher.py --educational
 ```
 
 ## 📋 Voraussetzungen
@@ -98,30 +98,30 @@ codecrusher/
 
 ```bash
 # Alle Challenges lösen
-python main.py --target http://localhost:3000 --solve-all
+python run_codecrusher.py --target http://localhost:3000 --solve-all
 
 # Nur bestimmte Kategorie
-python main.py --category injection --verbose
+python run_codecrusher.py --category injection --verbose
 
 # Educational Mode
-python main.py --educational --report html
+python run_codecrusher.py --educational --report html
 
 # Mit Konfigurationsdatei
-python main.py --config custom_config.yaml --solve-all
+python run_codecrusher.py --config custom_config.yaml --solve-all
 ```
 
 ### Erweiterte Optionen
 
 ```bash
 # Verschiedene Targets
-python main.py --target http://juice-shop.herokuapp.com --solve-all
+python run_codecrusher.py --target http://juice-shop.herokuapp.com --solve-all
 
 # Verschiedene Report-Formate
-python main.py --solve-all --report json
-python main.py --solve-all --report html
+python run_codecrusher.py --solve-all --report json
+python run_codecrusher.py --solve-all --report html
 
 # Verboses Logging
-python main.py --solve-all --verbose
+python run_codecrusher.py --solve-all --verbose
 ```
 
 ## ⚙️ Konfiguration

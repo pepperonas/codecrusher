@@ -4,7 +4,10 @@ import logging
 from pathlib import Path
 from typing import Dict, Optional, Any
 from datetime import datetime, timedelta
-import jwt
+try:
+    import jwt as pyjwt
+except ImportError:
+    pyjwt = None
 
 
 class SessionManager:
@@ -61,12 +64,14 @@ class SessionManager:
     def add_token(self, identifier: str, token: str) -> None:
         """Fügt Token zur Session hinzu"""
         # Versuche Token zu dekodieren für Metadaten
-        try:
-            decoded = jwt.decode(token, options={"verify_signature": False})
-            exp = decoded.get('exp')
-            expires_at = datetime.fromtimestamp(exp).isoformat() if exp else None
-        except:
-            expires_at = None
+        expires_at = None
+        if pyjwt:
+            try:
+                decoded = pyjwt.decode(token, options={"verify_signature": False})
+                exp = decoded.get('exp')
+                expires_at = datetime.fromtimestamp(exp).isoformat() if exp else None
+            except:
+                expires_at = None
             
         self.current_session['tokens'][identifier] = {
             'token': token,
