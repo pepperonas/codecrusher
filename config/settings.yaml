@@ -1,0 +1,54 @@
+# OWASP Juice Shop Automation Settings
+
+juice_shop:
+  base_url: "http://localhost:3000"
+  api_version: "v1"
+  timeout: 30
+  retry_attempts: 3
+  retry_delay: 2
+
+selenium:
+  driver: "chrome"  # chrome, firefox, edge
+  headless: false
+  window_size: "1920x1080"
+  implicit_wait: 10
+  page_load_timeout: 30
+  
+exploitation:
+  delay_between_attacks: 1  # seconds
+  verbose: true
+  educational_mode: false
+  save_screenshots: true
+  
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  file: "logs/juice_shop_automation.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+reporting:
+  output_dir: "reports"
+  format: "html"  # html, json, pdf
+  include_screenshots: true
+  include_payloads: true
+  
+# AI Integration (optional)
+ai:
+  enabled: false
+  provider: "openai"  # openai, local
+  model: "gpt-4"
+  temperature: 0.7
+  max_tokens: 2000
+  
+# Challenge-specific settings
+challenges:
+  skip_tutorial: false
+  categories_to_skip: []
+  specific_challenges: []  # If empty, solve all
+
+# Security settings
+security:
+  verify_ssl: false  # Set to false for local testing
+  proxy:
+    enabled: false
+    http: ""
+    https: ""

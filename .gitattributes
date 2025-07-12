@@ -1,0 +1,75 @@
+# CodeCrusher - Git Attributes
+# by Martin Pfeffer (c) 2025
+
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Python files
+*.py text eol=lf
+*.pyx text eol=lf
+*.pyi text eol=lf
+
+# Configuration files
+*.yaml text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.cfg text eol=lf
+*.ini text eol=lf
+*.conf text eol=lf
+
+# Documentation
+*.md text eol=lf
+*.txt text eol=lf
+*.rst text eol=lf
+
+# Scripts
+*.sh text eol=lf
+*.bash text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Web files
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.xml text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.tar.gz binary
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
+
+# Security related files
+*.key binary
+*.pem binary
+*.crt binary
+*.p12 binary
+
+# Archives
+*.7z binary
+*.gz binary
+*.rar binary
+*.tar binary
+
+# Exclude from language detection
+reports/* linguist-generated=true
+logs/* linguist-generated=true
+screenshots/* linguist-generated=true
+docs/_build/* linguist-generated=true
+
+# Mark as documentation
+docs/* linguist-documentation=true
+*.md linguist-documentation=true
+
+# Vendored code (if any)
+# vendor/* linguist-vendored=true

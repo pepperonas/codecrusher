@@ -1,0 +1,47 @@
+# CodeCrusher Contributors
+
+## Lead Developer & Architect
+
+**Martin Pfeffer** <martin.pfeffer@codecrusher.dev>
+- Project Creator and Lead Developer
+- Security Framework Architecture
+- Core Exploit Development
+- Educational Content Creation
+
+## Contributors
+
+This project welcomes contributions from the security community.
+
+### How to Contribute
+
+1. Fork the repository
+2. Create a feature branch
+3. Implement your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+### Contribution Guidelines
+
+- Follow existing code style
+- Add proper documentation
+- Include unit tests for new features
+- Ensure all security tools are for educational purposes only
+- Follow responsible disclosure principles
+
+### Recognition
+
+All contributors will be listed here with their contributions.
+
+---
+
+## Special Thanks
+
+- **OWASP Foundation** - For creating Juice Shop and promoting security education
+- **Security Community** - For inspiration and knowledge sharing
+- **Open Source Contributors** - For libraries and tools that make this project possible
+
+## License
+
+All contributions are subject to the MIT License as specified in the LICENSE file.
+
+**Copyright (c) 2025 Martin Pfeffer**
